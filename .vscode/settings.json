@@ -3,7 +3,8 @@
   "deno.lint": true,
   "deno.unstable": true,
   "deno.suggest.imports.hosts": {
-    "https://deno.land": true
+    "https://deno.land": true,
+    "https://raw.githubusercontent.com": false
   },
   "deno.importMap": ".vscode/lume_import_map.json"
 }

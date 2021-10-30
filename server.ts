@@ -6,6 +6,6 @@ async function handler(req: Request) {
   const response = await site.onDemand.response(new URL(req.url));
   return response || new Response("Not found", { status: 404 });
 }
-console.log(Deno.readTextFileSync(Deno.cwd() + "/_ondemand.json"));
+console.log(await Deno.readFile(Deno.cwd() + "/_ondemand.json"));
 console.log("Listening on http://localhost:8000");
 await listenAndServe(":8000", handler);

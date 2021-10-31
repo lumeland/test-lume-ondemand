@@ -1,1 +1,2 @@
 ondemand: true
+layout: layout.njk

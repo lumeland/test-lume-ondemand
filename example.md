@@ -1,1 +1,1 @@
-Hello world
+Páxina de exemplo boas

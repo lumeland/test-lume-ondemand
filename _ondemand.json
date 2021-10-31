@@ -1,3 +1,4 @@
 {
-  "/example/": "/example.md"
+  "/example/": "/example.md",
+  "/posts/new-url/": "/posts/hello-world.md"
 }

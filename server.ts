@@ -4,6 +4,7 @@ import { listenAndServe } from "https://deno.land/std@0.111.0/http/server.ts";
 async function handler(req: Request) {
   console.log(req.url);
   const response = await site.onDemand.response(new URL(req.url));
+  site.source.reload("/example.md");
   console.log("root", site.source.root);
   return response || new Response("Not found", { status: 404 });
 }

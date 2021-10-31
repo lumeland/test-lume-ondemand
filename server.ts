@@ -2,11 +2,10 @@ import site from "./_config.ts";
 import { listenAndServe } from "https://deno.land/std@0.111.0/http/server.ts";
 
 async function handler(req: Request) {
-  console.log(new URL(req.url));
+  console.log(req.url);
   const response = await site.onDemand.response(new URL(req.url));
-  console.log(site.source.root);
+  console.log("root", site.source.root);
   return response || new Response("Not found", { status: 404 });
 }
-console.log(await Deno.readTextFile(Deno.cwd() + "/_ondemand.json"));
 console.log("Listening on http://localhost:8000");
 await listenAndServe(":8000", handler);

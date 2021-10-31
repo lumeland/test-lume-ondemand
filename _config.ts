@@ -1,4 +1,4 @@
-import lume from "https://raw.githubusercontent.com/lumeland/lume/305be6b8eddf214c17ff980fdb069c928108ece0/mod.ts";
+import lume from "https://raw.githubusercontent.com/lumeland/lume/b98f77569265d872919fff6e8651b1b424748df6/mod.ts";
 
 const site = lume({}, {}, false);
 

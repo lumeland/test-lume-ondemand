@@ -9,7 +9,8 @@ async function handler(request: Request) {
 
     if (result) {
       const [body, response] = result;
-      return new Response(body, response);
+      console.log({body, response});
+      // return new Response(body, response);
     }
   }
 

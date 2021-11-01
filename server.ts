@@ -8,8 +8,8 @@ async function handler(request: Request) {
     const result = await site.options.server.router(url);
 
     if (result) {
-      const [body, response] = result;
-      console.log({body, response});
+      // const [body, response] = result;
+      // console.log({body, response});
       // return new Response(body, response);
     }
   }

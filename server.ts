@@ -7,13 +7,14 @@ async function handler(request: Request) {
     const url = new URL(request.url);
     try {
       const result = await site.options.server.router(url);
-  
+
       if (result) {
         const [body, response] = result;
         return new Response(body, response);
       }
     } catch (error) {
       console.error(error);
+      return new Response(error.message, { status: 500 });
     }
   }
 

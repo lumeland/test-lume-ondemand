@@ -7,10 +7,9 @@ addEventListener("fetch", (event) => {
 
 async function responseHandler(event: Deno.RequestEvent) {
   if (site.options.server.router) {
-    console.log(site.options.server);
     const url = new URL(event.request.url);
     const result = await site.options.server.router(url);
-    console.log({url, result});
+    console.log(site.options.watcher);
     if (result) {
       const [body, response] = result;
       return await event.respondWith(new Response(body, response));

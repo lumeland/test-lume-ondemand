@@ -1,5 +1,8 @@
-import lume from "https://raw.githubusercontent.com/lumeland/lume/4f005e89ee3efc6e9115b81d64a064b91e0540ef/mod.ts";
+import lume from "https://raw.githubusercontent.com/lumeland/lume/e9f43f352fbee0ea467820841f667cac73a06123/mod.ts";
+import onDemand from "https://raw.githubusercontent.com/lumeland/lume/e9f43f352fbee0ea467820841f667cac73a06123/plugins/on_demand.ts";
 
 const site = lume({}, {}, false);
+
+site.use(onDemand());
 
 export default site;

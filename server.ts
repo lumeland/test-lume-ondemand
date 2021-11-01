@@ -6,20 +6,15 @@ addEventListener("fetch", (event) => {
 });
 
 async function responseHandler(event: Deno.RequestEvent) {
-  const url = new URL(event.request.url);
-  console.log({ url });
+  if (site.options.server.router) {
+    const url = new URL(event.request.url);
+    const result = await site.options.server.router(url);
 
-  const response = new Response("Noop", { status: 404 });
-  await event.respondWith(response);
-}
-
-async function handler(req: Request) {
-  const result = await site.onDemand.response(new URL(req.url));
-  console.log(result);
-  if (result) {
-    const [body, response] = result;
-    // return new Response(body, response);
+    if (result) {
+      const [body, response] = result;
+      return await event.respondWith(new Response(body, response));
+    }
   }
 
-  return new Response("Not found", { status: 404 });
+  return await event.respondWith(new Response("Noop", { status: 404 }));
 }

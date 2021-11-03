@@ -1,4 +1,5 @@
 {
+  "/other/": "/other.tmpl.js",
   "/example/": "/example.md",
   "/posts/new-url/": "/posts/hello-world.md"
 }

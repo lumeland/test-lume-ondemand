@@ -1,5 +1,4 @@
 {
   "/error/": "/error.tmpl.js",
-  "/example/": "/example.md",
-  "/posts/new-url/": "/posts/hello-world.md"
+  "/example/": "/example.md"
 }

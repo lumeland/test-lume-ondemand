@@ -1,0 +1,2 @@
+- [Dynamic page](/example/)
+- [Errored dynamic page](/error/)

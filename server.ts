@@ -1,23 +1,20 @@
 import site from "./_config.ts";
-import { serveFile } from "./deps.ts";
+import Server from "lume/core/server.ts";
+import onDemand from "lume/middlewares/on_demand.ts";
+import { JsonRouter } from "lume/plugins/on_demand.ts";
 
-import { listenAndServe } from "https://deno.land/std@0.113.0/http/server.ts";
+const server = new Server({
+  port: 8000,
+  root: site.dest(),
+});
 
-async function handler(request: Request) {
-  try {
-    const url = new URL(request.url);
-    const [body, response] = await serveFile(url, {
-      root: site.dest(),
-      page404: site.options.server.page404,
-      directoryIndex: false,
-      router: site.options.server.router,
-    });
-    return new Response(body, response);
-  } catch (error) {
-    console.error(error);
-    return new Response(`Error 500: ${error.message}`, { status: 500 });
-  }
-}
+const router = new JsonRouter(site.src("_routes.json"));
+
+server.use(onDemand({
+  site,
+  router: (url) => router.match(url),
+}));
+
+server.start();
 
 console.log("Listening on http://localhost:8000");
-await listenAndServe(":8000", handler);

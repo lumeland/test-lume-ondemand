@@ -1,2 +1,2 @@
-- [Dynamic page](/example/)
-- [Errored dynamic page](/error/)
+- [Markdown + Nunjucks dynamic page](/example/)
+- [Javascript + Nunjucks dynamic page](/example2/)

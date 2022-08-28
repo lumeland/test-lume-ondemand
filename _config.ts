@@ -1,7 +1,7 @@
 import lume from "lume/mod.ts";
 import onDemand from "lume/plugins/on_demand.ts";
 
-const site = lume({}, {}, false);
+const site = lume();
 
 site.use(onDemand());
 site.ignore("README.md");

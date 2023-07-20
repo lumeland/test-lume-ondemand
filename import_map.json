@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.18.1/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@a2a6de993b5f57336c7a8388e6155f1e1f6f42ad/",
     "npm:date-fns@2.30.0": "https://esm.sh/date-fns@2.30.0",
     "npm:markdown-it-attrs@4.1.6": "https://esm.sh/markdown-it-attrs@4.1.6",
     "npm:markdown-it@13.0.1": "https://esm.sh/markdown-it@13.0.1",

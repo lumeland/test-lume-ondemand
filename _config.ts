@@ -5,7 +5,9 @@ const site = lume();
 
 site.use(onDemand({
   extraData(request: Request) {
-    const params = Object.fromEntries(new URL(request.url).searchParams.entries());
+    const params = Object.fromEntries(
+      new URL(request.url).searchParams.entries(),
+    );
     return {
       params,
       request,

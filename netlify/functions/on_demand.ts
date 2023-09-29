@@ -6,10 +6,7 @@ import type { Router } from "lume/middlewares/on_demand.ts";
 import type { Config } from "https://edge.netlify.com";
 
 export const config: Config = {
-  path: [
-    "/example/",
-    "/example2/",
-  ],
+  path: "/example/"
 };
 
 export default async function (request: Request) {

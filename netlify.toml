@@ -4,6 +4,7 @@
     curl -fsSL https://deno.land/x/install/install.sh | sh && \
     /opt/buildhome/.deno/bin/deno task build \
   """
+  edge_functions = "netlify/functions"
 
 [functions]
   deno_import_map = "./deno.json"

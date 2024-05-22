@@ -1,2 +1,2 @@
-- [Markdown + Nunjucks dynamic page](/example/)
-- [Javascript + Nunjucks dynamic page](/example2/)
+- [Markdown + Vento dynamic page](/example/)
+- [Javascript + Vento dynamic page](/example2/)

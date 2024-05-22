@@ -1,4 +1,4 @@
-export const layout = "layout.njk";
+export const layout = "layout.vto";
 export const ondemand = true;
 
 export default function ({ params }) {

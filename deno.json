@@ -1,10 +1,10 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@da2ab75d494c7af866ba80c001b8117d04271609/"
+    "lume/": "https://deno.land/x/lume@v2.2.0/"
   },
   "lock": false,
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "serve_ondemand": "deno run -A serve.ts"
